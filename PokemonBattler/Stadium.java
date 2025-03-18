@@ -1,7 +1,7 @@
 package PokemonBattler;
 
 import PokemonBattler.Pokemon.Pokemon;
-public class StadiumTester {
+public class Stadium {
     
     public void battle(Pokemon p1, Pokemon p2){
         //Normally check speed first
