@@ -1,7 +1,7 @@
 package PokemonBattler;
 
 import PokemonBattler.Pokemon.PokemonCreatures.*;
-public class Battler {
+public class BattleTester {
     public static void main(String[] args) {
         Stadium battle = new Stadium();
         Squirtle coolGuy = new Squirtle();
