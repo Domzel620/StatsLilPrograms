@@ -25,26 +25,20 @@ public class Birthday {
                 classList.add(person);
             }
             
-            for(Person dude : classList){
-                ArrayList<Person> matched = new ArrayList<>();
-                for(int j = 0; j < classList.size(); j++){
-                    if(matched.contains(classList.get(j))){
-                        continue;
-                    }
-                    if(dude.getMonth() == ((Person)classList.get(j)).getMonth()){
-                        if(dude.getDay() == ((Person)classList.get(j)).getDay()){
-                            matched.add(classList.get(j));
+            for(int k = 0; k < classList.size(); k++){
+                Person dude = classList.get(k);
+                for(int j = k+1; j < classList.size(); j++){
+                    if(dude.getMonth() == classList.get(j).getMonth()){
+                        if(dude.getDay() == classList.get(j).getDay()){
+                            classList.remove(classList.get(j));
                             match++;
                         }
                     }
                 }
             }
-            if(match > 0){
-                match--;
-            }
-            double matchPer = (double) match/classList.size() * 100;
+            double matchPer = (double) match/people * 100;
             int runCount = i+1;
-            System.out.println("The Amount of people that matched in run "+ runCount +  " was " + match + "% of the class");
+            System.out.println("In "+ runCount +" runs of "+ people +" people, there were "+ match + " matches, which is about " + matchPer + "% of the class");
         }
     }
 }
