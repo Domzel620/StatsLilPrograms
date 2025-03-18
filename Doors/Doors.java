@@ -1,3 +1,4 @@
+package Doors;
 import java.util.Random;
 public class Doors {
     

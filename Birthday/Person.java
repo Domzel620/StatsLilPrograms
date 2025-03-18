@@ -1,3 +1,4 @@
+package Birthday;
 public class Person {
     private int month;
     private int day;
